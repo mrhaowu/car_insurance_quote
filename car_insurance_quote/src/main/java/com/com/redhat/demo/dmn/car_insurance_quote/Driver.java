@@ -6,12 +6,47 @@ package com.com.redhat.demo.dmn.car_insurance_quote;
 
 public class Driver implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Driver() {
-    }
+	@org.kie.api.definition.type.Label(value = "Age of Driver in Years")
+	private java.lang.Integer age;
+	@org.kie.api.definition.type.Label(value = "Number of Traffic Tickets")
+	private java.lang.Integer numTickets;
+	@org.kie.api.definition.type.Label(value = "Number of Accidents")
+	private java.lang.Integer numAccidents;
 
+	public Driver() {
+	}
 
+	public java.lang.Integer getAge() {
+		return this.age;
+	}
 
+	public void setAge(java.lang.Integer age) {
+		this.age = age;
+	}
+
+	public java.lang.Integer getNumTickets() {
+		return this.numTickets;
+	}
+
+	public void setNumTickets(java.lang.Integer numTickets) {
+		this.numTickets = numTickets;
+	}
+
+	public java.lang.Integer getNumAccidents() {
+		return this.numAccidents;
+	}
+
+	public void setNumAccidents(java.lang.Integer numAccidents) {
+		this.numAccidents = numAccidents;
+	}
+
+	public Driver(java.lang.Integer age, java.lang.Integer numTickets,
+			java.lang.Integer numAccidents) {
+		this.age = age;
+		this.numTickets = numTickets;
+		this.numAccidents = numAccidents;
+	}
 
 }
